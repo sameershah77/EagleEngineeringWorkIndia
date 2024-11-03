@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+}
+.colorGrey1{
+  background-color: #bec6b5;
+
+
+}
+
+.colorGrey2{
+  background-color: #233f13;
+}
+.divider1{
+    height: 2vh;
+    background: #233f13;
+    background: -webkit-linear-gradient(0deg, #2a384e 0%, #bec6b5 100%);
+    background: linear-gradient(0deg, #2a384e 0%, #bec6b5 100%);
+  }
+  
+  .divider2{
+    height: 2vh;
+    background: #bec6b5;
+    background: -webkit-linear-gradient(0deg, #bec6b5 0%, #2a384e 100%);
+    background: linear-gradient(0deg, #bec6b5 0%, #2a384e 100%);
+  }
+.blackOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999; /* Ensure it's on top of all content */
+  animation: fadeIn 2s linear forwards; /* Fade out animation */
+}
+
+#productPanelImage{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    opacity: 0.3;
+    position: absolute;
+}
+
+
+.productMain{
+    min-height: 80vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #bec6b5;
+}
+
+.line{
+  width: 90%;
+  height: 1px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #eaece9;
+
+}
+/* Total hieght taken by 40vw */
+.productSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 4vw;
+    padding-bottom: 2vw;   
+}
+.productWindow {
+    height: 4vw;
+    display: flex;
+    width: 94%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #233f13;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.productWindow h4 {
+    font-size: 2vw;
+    font-weight: 500;
+    color:#bec6b5;
+}
+.productWindow a {
+    font-size: 1.6vw;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.productBlock {
+    height: 30vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+  }
+  .productItem {
+    position: relative;
+    height: 90%;
+    width: 45%;
+    border: 1px solid #304e1e;
+
+    border-radius: 2vw;
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    background-color: #233f13;
+    box-shadow: 4px 4px 8px #2f511aa0;
+    background: repeating-radial-gradient(
+      circle,
+      #2a5310,
+      #233f13 0.58vw,
+      transparent 0.6vw
+    );
+    background-size: 1.6vw 1.6vw;
+    transition: all 0.3s ease-out;
+  }
+
+  .productItem:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 0.1vw #2f511aa0);
+  }
+
+  
+  .productImage{
+    height: 100;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .productImage img{
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+  }
+  .productContent{
+    height: 100%;
+    width: 60%;
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    border-left: 0.2vw solid #233f13;
+  }
+
+  .nameAndType {
+    height: 30%;
+    width: 100%;
+    padding-top: 0.4vw;
+  }
+  .nameAndType h4 {
+    font-size: 2vw;
+    font-weight: 500;
+  }
+  .nameAndType h6 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-top: 0.4vw;
+  }
+  .otherContent{
+    width: 100%;
+    height: 70%;
+    margin-top: 0.4vw;
+  }
+  p{
+    display: inline;
+  }  
+.otherContent li {
+    list-style: none;
+    border-bottom: 1px solid #37931b;
+    margin-top: 0.2vw;
+    padding-left: 0.3vw;
+    margin-right: 1vw;
+    display: flex;
+    align-items: end; /* Center-align content */
+    height: 2.4vw;
+    overflow: hidden;
+}
+
+  .otherContent p{
+    text-align: center;
+    font-size: 1.4vw;
+    color: antiquewhite;
+    font-weight: 300;
+  }
+
+
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 10000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8); 
+    animation: fadeIn 0.8s;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #0d0d0dac;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 4vw;
+    font-weight: bold;
+    position: absolute;
+    top: 4vw;
+    height: 4vw;
+    width: 4vw;
+    right: 4vw;
+    border: 1px solid white;
+    border-radius: 0.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  
+  }
+  
+  .modal-product-image {
+    width: 50%;
+    height: auto;
+  }
+  
+  .modal-product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: drop-shadow(0 0 0.5vw #c0c6d6);
+  }
+  
+  .modal-product-details {
+    width: 50%;
+    padding-left: 20px;
+  }
+  
+  .modal-product-details h4 {
+    font-size: 3vw;
+    margin: 0;
+    padding-bottom: 1vw;
+  }
+  .modal-product-details h6 {
+    font-size: 2vw;
+    margin: 0;
+    padding-bottom: 4vw;
+  }
+  
+  .modal-product-details ul {
+    list-style: none;
+    padding: 0;
+    padding-right: 4vw;
+  }
+  
+  .modal-product-details li {
+    margin-bottom: 2vw;
+    border-bottom: 1px solid #36435f;
+    padding-bottom: 0.4vw;
+  }
+  
+
+
+
+@media screen and (max-width: 600px) { 
+.line{
+  width: 90%;
+  height: 1px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* Total hieght taken by 40vw */
+.productSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 4vw;
+    padding-bottom: 2vw;   
+}
+.productWindow {
+    height: 8vw;
+    display: flex;
+    width: 94%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.productWindow h4 {
+    font-size: 3vw;
+    font-weight: 500;
+    margin-left: 1vw;
+}
+.productWindow a {
+    font-size: 2.3vw;
+    font-weight: 400;
+    margin-right: 1vw;
+    text-decoration: none;
+}
+
+.productBlock {
+    height: 80vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+  }
+  .productItem {
+    position: relative;
+    height: 45%;
+    width: 90%;
+    border-radius: 2vw;
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    background-size: 1.6vw 1.6vw;
+  }
+
+  .productItem:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.02);
+  }
+
+  .productImage{
+    height: 100;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vw;
+  }
+  .productImage img{
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+  }
+  .productContent{
+    height: 100%;
+    width: 100%;
+    padding-left: 2vw;
+    display: flex;
+    margin-left: 2vw;
+    flex-direction: column;
+  }
+  .nameAndType {
+    height: 20%;
+    width: 100%;
+    padding-top: 1vw;
+  }
+  .nameAndType h4 {
+    font-size: 2.8vw;
+    font-weight: 500;
+  }
+  .nameAndType h6 {
+    font-size: 1.8vw;
+    font-weight: 400;
+    margin-top: 0.4vw;
+  }
+  .otherContent{
+    width: 100%;
+    height: 80%;
+    margin-top: 2vw;
+  }
+  p{
+    display: inline;
+  }
+.otherContent li {
+    list-style: none;
+    margin-top: 0.2vw;
+    padding-left: 0.3vw;
+    margin-right: 1vw;
+    display: flex;
+    align-items: end; /* Center-align content */
+    height: 4vw;
+    overflow: hidden;
+}
+
+  .otherContent p{
+    text-align: center;
+    font-size: 1.8vw;
+    color: antiquewhite;
+    font-weight: 300;
+  }
+}

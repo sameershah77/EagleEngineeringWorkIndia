@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="ProductCSS/BallCastor.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/ProductModelCss.css">
+
+    <script type="module">
+      import { fetchBallCastor, updateDOMWithBallCastor } from './Javascript/FirebaseProductData.js';
+      document.addEventListener('DOMContentLoaded', async () => {
+        const items = await fetchBallCastor('Ball Castor');
+        updateDOMWithBallCastor(items);
+      });
+    </script>
+</head>
+
+<body class="blackOverlay" id="container">
+  <header class="intoPanel">
+    <div id="centerText"><h3>Ball Castor</h3></div>
+
+    <!-- <video id="mainVideo" src="video.mp4" autoplay muted></video> -->
+    <img id="BallCastorPanelImage" src="MainSliderImages/Orange/orange_page-0003.jpg" alt="">
+    <div id="nav" class="glassEffect4 bgPattern2">
+      <div id="nav_container">
+      <div id="mainLogo" class="navItems"><a href="index.html"><img src="logos/RehanLogo4.png" alt=""></a></div>
+      <div id="home" class="navItems"><a class="nav_text_hover" href="index.html">Home</a></div>
+      <div id="about" class="navItems"><a class="nav_text_hover" href="about.html">About Us</a></div>
+      <div id="products" class="navItems"><a class="nav_text_hover" href="product.html">Products</a>
+      <div class="mega-box">
+        <div class="content glassEffect3 ">
+          <div class="main">
+            <ul class="mega-links">
+              <li><a href="SixWheelCastor.html">Six Wheel Castor</a></li>
+              <li><a href="FourWheelCastor.html">Four Wheel Castor</a></li>
+              <li><a href="MiniWheelCastor.html">Mini Wheel Castor</a></li>
+              <li><a href="SixWheelSpeedCastor.html">Six Wheel Speed Castor</a></li>
+              <li><a href="NanoWheelCastor.html">Nano Roller & Wheel Castor</a></li>
+            </ul>
+          </div>
+          <div class="main">
+            <ul class="mega-links">
+            <li><a href="BallCastor.html">Ball Castor</a></li>
+            <li><a href="ChairWheelCastor.html">Chair Wheel Castor</a></li>
+            <li><a href="EagleSwivelCastor.html">Eagle Swivel Castor</a></li>
+            <li><a href="EagleP.U.PuffCastor.html">Eagle P.U. Puff Castor</a></li>
+            <li><a href="FixCastor.html">Fix Castor</a></li>
+            </ul>
+          </div>
+          <div class="main">
+            <ul class="mega-links">
+              <li><a href="GlassRunner.html">Glass Runner</a></li>
+              <li><a href="FencySelfBracket.html">Fency Self Bracket</a></li>
+              <li><a href="AngleBracket.html">Angle Bracket</a></li>
+              <li><a href="Corner.html">Corner</a></li>
+              <li><a href="GasPump.html">Gas Pump</a></li>
+            </ul>
+          </div>
+          <div class="main">
+            <ul class="mega-links">
+              <li><a href="TableBracket.html">Table Bracket</a></li>
+              <li><a href="UniversalBend.html">Universal Bend</a></li>
+              <li><a href="FencySSTableChain.html">Fency SS Table Chain</a></li>
+              <li><a href="TProfile.html">T Profile</a></li>
+              <li><a href="GlassVaccum.html">Glass Vaccum</a></li>
+            </ul>
+          </div>
+          <div class="main">
+            <img src="images/Orange_Speed_Six_Fix.png" alt="">
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="catalogue" class="navItems"><a class="nav_text_hover" href="catalogue.html">Catalogue</a></div>
+      <div id="contact" class="navItems"><a class="nav_text_hover" href="contact.html">Contact</a></div>
+      <div id="option" class="navItems"><img src="logos/option.svg" alt=""></div>
+    </div>
+    <div id="nav_items_after_responsive">
+  
+    </div>
+    </div>
+    
+  </header>
+<main class="BallCastorMain">
+ <!-- B1 -->
+ <div class="productBlock">
+  <div class="productItem" id="item1">
+    <div class="productImage">
+      <img src="" alt="">
+    </div>
+    <div class="productContent">
+      <div class="nameAndType">
+        <h4></h4>
+        <h6></h6>
+      </div>
+      <div class="otherContent">
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+  <div class="productItem" id="item2">
+    <div class="productImage">
+      <img src="" alt="">
+    </div>
+    <div class="productContent">
+      <div class="nameAndType">
+        <h4></h4>
+        <h6></h6>
+      </div>
+      <div class="otherContent">
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- B2 -->
+ <div class="productBlock">
+  <div class="productItem" id="item3">
+    <div class="productImage">
+      <img src="" alt="">
+    </div>
+    <div class="productContent">
+      <div class="nameAndType">
+        <h4></h4>
+        <h6></h6>
+      </div>
+      <div class="otherContent">
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+    <div class="divider1"></div>
+    <footer>
+      <img src="logos/RehanLogo4.png" alt="">
+      <div class="footerContent" >
+        <div class="footerContentRow1">
+        <div class="footerAddress">
+          <h6>Address</h6>
+          <h5>Eagle Engineering Works India Pvt. Ltd. Office Address</h5>
+          <p>Office No. A 102, 1st Floor, Dattani Plaza Commercial Premises CHS Ltd, Andheri, Kurla Road Safedful, Sakinaka, Mumbai, Maharashtra 400072</p>
+          <h5>Eagle Engineering Works India Pvt. Ltd. Factory Address</h5>
+          <p>6, DVS Rd, Azad Nagar, Ghatkopar West, Mumbai, Maharashtra 400086</p>
+        </div>
+        <div class="footerDealers">
+          <h6>Dealers</h6>
+          <h5>Mumbai</h5>
+          <h5>Pune</h5>
+          <h5>Hyderabad</h5>
+          <h5>Kolkata</h5>
+          <h5>Chennai</h5>
+          <h5>Bangalore</h5>
+          <h5>Delhi</h5>
+          <h5>Nagpur</h5>
+          <h5>Goa</h5>
+          <h5>Noida</h5>
+          <h5>Gurugram</h5>
+        </div>
+        </div>
+    
+        <div class="footerContentRow2">
+        <div class="footerJoin">
+          <h6>Join Us</h6>
+          <div>
+          <img src="logos/youtube.svg" alt="">
+          <p>Youtube</p>
+          </div>
+          <div>
+          <img src="logos/instagram.svg" alt="">
+          <p>Instagram</p>
+          </div>
+          <div>
+          <img src="logos/facebook.svg" alt="">
+          <p>Facebook</p>
+          </div>
+          <div>
+          <img src="logos/twitter.svg" alt="">
+          <p>Twitter</p>
+          </div>
+          <div>
+          <img src="logos/linkedin.svg" alt="">
+          <p>LinkedIn</p>
+          </div>
+        </div>
+        
+        <div class="footerContact">
+        <h6>Contact Us</h6>
+        <h5>Through Official Email</h5>
+        <p><a href="info@furnitureandhardware">info@furnitureandhardware</a></p>
+        <p><a href="eagleengineeringworks1995@gmail.com">eagleengineeringworks1995@gmail.com</a></p>
+        <h5>Through Official Number</h5>
+        <p>+91 9833128576</p> 
+        <p>+91 9833104349</p>
+        <p>+91 9594588894</p>
+        <p>+91 7400348589</p>
+        </div>
+      </div>
+      </div>
+      <h4 id="copyright"> © 2024 Eagle Engineering Work India Pvt. Ltd. All Rights Reserved.</h4>
+      </footer>
+    
+      <!-- Main JS -->
+      <script src="Javascript/app.js" ></script>
+<!-- The Modal -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-product-image">
+          <img src="" id="modalImage" alt="">
+      </div>
+      <div class="modal-product-details">
+          <h4 id="modalName">Product Name</h4>
+          <h6 id="modalType">Product Type</h6>
+          <ul id="modalOtherContent">
+              <!-- Product details will be appended here -->
+          </ul>
+      </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var modal = document.getElementById("productModal");
+  var span = document.getElementsByClassName("close")[0];
+
+  document.querySelectorAll(".productItem").forEach(item => {
+      item.addEventListener("click", function() {
+          var imgSrc = this.querySelector(".productImage img").src;
+          var name = this.querySelector(".nameAndType h4").textContent;
+          var type = this.querySelector(".nameAndType h6").textContent;
+          var otherContent = this.querySelector(".otherContent ul").innerHTML;
+
+          document.getElementById("modalImage").src = imgSrc;
+          document.getElementById("modalName").textContent = name;
+          document.getElementById("modalType").textContent = type;
+          document.getElementById("modalOtherContent").innerHTML = otherContent;
+
+          modal.style.display = "block";
+      });
+  });
+
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+});
+</script>
+
+</body>
+</html>
